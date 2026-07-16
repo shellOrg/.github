@@ -1,0 +1,38 @@
+name: Feature request
+description: Propose a user-centered improvement
+title: "[Feature]: "
+labels: ["type:feature", "status:triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: Describe the problem and affected users, not only the desired implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: true
+  - type: dropdown
+    id: compatibility
+    attributes:
+      label: Compatibility impact
+      options: ["None expected", "Backward compatible", "Potentially breaking", "Unknown"]
+    validations:
+      required: true
+  - type: checkboxes
+    id: security
+    attributes:
+      label: Security impact
+      options:
+        - label: This may affect authentication, authorization, cryptography, signing, secrets, privacy, dependencies, build, or release behavior.
+

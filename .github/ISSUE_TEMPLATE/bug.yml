@@ -1,0 +1,56 @@
+name: Bug report
+description: Report a reproducible defect
+title: "[Bug]: "
+labels: ["type:bug", "status:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Search existing issues first. Do not disclose security vulnerabilities here; use the private security reporting link."
+  - type: input
+    id: version
+    attributes:
+      label: Affected version or commit
+      placeholder: v1.2.3 or commit SHA
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, runtime, browser, architecture, and relevant configuration. Remove secrets and personal data.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Provide the smallest deterministic set of steps or a minimal repository.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs
+      render: shell
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I removed credentials, private keys, personal data, and other sensitive information.
+          required: true
+        - label: This report does not describe a security vulnerability.
+          required: true
+
